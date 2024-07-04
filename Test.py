@@ -4,8 +4,11 @@ import pandas as pd
 import numpy as np
 from rtree import index
 import datetime
+import os
+from dotenv import load_dotenv
 # Hardcoded API key
-LTA_API_KEY = 'ci3N9yskQ+u28iUE9zvNxw=='
+load_dotenv('env.txt')
+LTA_API_KEY = os.getenv('LTA_API_KEY')
 
 
 
