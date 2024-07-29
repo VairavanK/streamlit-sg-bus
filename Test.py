@@ -151,7 +151,7 @@ def get_nearby_descriptions(target_lat, target_lon, max_distance=500):
 
 
 def main():
-    st.title("Address Search App")
+    st.title("Singapore Bus Timings")
 
     # Initialize session state
     if 'selected' not in st.session_state:
@@ -163,7 +163,7 @@ def main():
     with st.form(key='search_form'):
         col1, col2 = st.columns([3, 1])
         with col1:
-            address = st.text_input("Address Input")
+            address = st.text_input("Enter Address to display nearby bustops")
         with col2:
             search_button = st.form_submit_button("Search")
 
