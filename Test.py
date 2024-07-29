@@ -180,7 +180,6 @@ def main():
                     for i, row in nearby_descriptions.iterrows():
                         if st.button(f"{row['Description']} ({row['distance']} meters)"):
                             st.session_state.selected = row
-                            st.experimental_rerun()
                 else:
                     st.write(f"You selected: Bus Stop Code {st.session_state.selected['BusStopCode']}, Description: {st.session_state.selected['Description']}, Distance: {st.session_state.selected['distance']} meters")
                     st.dataframe(fetch_bus_arrival_data(st.session_state.selected['BusStopCode']))
